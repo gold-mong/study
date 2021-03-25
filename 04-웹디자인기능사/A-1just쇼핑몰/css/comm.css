@@ -1,0 +1,326 @@
+@charset "UTF-8";
+
+*{
+    margin: 0; padding: 0;
+    font-size: 14px; line-height: 1.5; 
+    color: #222328; 
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* comm */
+.blind{
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+
+.wrap{
+    width: 1200px; margin: 0 auto;
+}
+
+header{
+    position: relative;
+    background-color: #fff;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo a{
+    display: block;
+    background: url(../images/logo-kakaoi.svg) 0 50% no-repeat;
+    width: 125px; height: 100px;
+    text-indent: -9999px;
+}
+
+/* 비활성화 탭 */
+.tab .tit-tab a{
+    display: block;
+    height: 50px; background-color: #eee;
+    text-align: center; line-height: 50px;
+    border-bottom: 3px solid #002866;
+}
+
+/* 활성화 탭 */
+.tab .on .tit-tab a{
+    background-color: #002866;
+    color: #fff;
+}
+
+.tab .cont-tab{
+    display: none;
+    position: absolute; top: 60px; left: 0;
+    width: 360px;
+}
+
+.tab .on .cont-tab{
+    display: block;
+}
+
+.tab{
+    position: relative;}
+
+nav{
+    /* width: 40%; */
+    display: flex;
+    align-items: center;
+    /* margin-right: -40px; */
+}
+
+.nav-depth1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav-depth1 > li {
+    position: relative;}
+
+.nav-depth1 > li > a{
+    display: block;
+    height: 100px;
+    padding: 0 40px;
+    /* background-color: rgba(255, 0, 0, 0.493); */
+    line-height: 100px;  
+    /* text 수직 가운데 정렬 line-height 값을 엄마 태그의 높이값 */
+}
+
+.nav-depth1 > li:hover > a {
+    color: #4a79c0;
+    border-bottom: 4px solid #002866;
+}
+
+/* mouse-out */
+.nav-depth2{
+    /* display: none; */
+    position: absolute; top: 100px; left: 0px;
+    z-index: 100;
+    width: 100%;    padding-top: 0px;
+    height: 0; overflow: hidden;
+    transition: all 0.5s;
+}
+
+/* mouse-over */
+nav:hover .nav-depth2, nav:hover .nav-bg{
+    height: 150px;
+    padding-top:10px;
+}
+
+.nav-depth2 a:hover{
+    background-color: #082353d8;
+    color: #fff;
+}
+
+.nav-depth2 a{
+    display: block;
+    text-align: center;
+    padding: 6px 0 ;
+}
+
+.nav-bg{
+    transition: all 0.5s;
+    position: absolute; top: 100px; left: 0;
+    z-index: 100;
+    width: 100%; height: 0px;
+    background-color: #fff;
+    border-top:1px solid #eee;
+}
+
+.slide{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide ul{
+    display: flex;
+    position: absolute; top: 0; left: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 200px;padding: 10px 0;
+}
+
+.container .tab, .container > section{
+    width: 30%;
+}
+
+.container .tab {
+    display: flex;
+  }
+
+
+/* 공지사항 */
+.sec-bbs .cont-tab a {
+    display: block;
+    padding: 4px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sec-bbs .cont-tab a::before{
+    display: inline-block;
+    content: '';
+    width: 5px; height: 5px;
+    background: #000;
+    margin: -2px 5px 0 0;
+    vertical-align: middle;
+}
+
+.tab{
+    display: flex;
+}
+
+.sec-bbs{
+    width: 50%;
+}
+
+/* 갤러리 */
+.sec-gallery{
+    width: 50%;}
+
+.sec-gallery ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-gallery li{
+ width: 31%;
+}
+
+.sec-gallery a{
+    display: block;
+}
+
+.sec-gallery img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    object-position: 100% 50%;
+}
+
+/* 배너 */
+.sec-bnr a{
+    display: block;
+}
+
+.sec-bnr img{
+    width: 360px; height: 180px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+/* 바로가기 */
+.sec-goto .cont{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sec-goto a{
+    display: block;
+    height: 50px;
+    padding-left: 60px;
+    line-height: 50px;
+    background-position: 0 0;
+    background-repeat: no-repeat;    
+    }
+
+.sec-goto li:first-child a{
+    background-image: url(../images/ico-goto1.png);
+}
+.sec-goto li:nth-child(2) a{
+    background-image: url(../images/ico-goto2.png);
+}
+.sec-goto li:nth-child(3) a{
+    background-image: url(../images/ico-goto3.png);
+}
+.sec-goto li:last-child a{
+    background-image: url(../images/ico-goto4.png);
+}
+
+.sec-goto .lst-goto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* sec-goto .lst-goto li  로 써도됨 나중에 길어지면 같은 이름 적으면
+밑에처럼 적으면 겹치니까 그땐 아래처럼 쓰면 안됨 */
+.lst-goto li {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #999;
+}
+
+.copyright{
+    margin: 40px;
+    color: white;
+}
+
+
+footer .logo{
+    margin-left: 10px;
+}
+
+.lst-sns{
+    margin-top: 20px;
+    display: flex;
+}
+
+.lst-sns a{
+    color: #fff;
+    display: block;
+    padding: 20px;
+}
+
+.modal-wrap{
+    display: none;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.822);
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.modal-wrap .inner{
+    width: 668px; height: 553px;
+    position: relative;
+}
+
+.modal-wrap img{
+    border-radius: 60px;
+    box-shadow: 9px 6px 9px #11111185;
+    /* overflow: hidden; */
+}
+
+.inner button{
+    position: absolute; top: -20px; right: -20px;
+    background-color: #fff;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    /* font-family: 'Nanum Gothic', sans-serif;
+    font-size: 15px; 
+    text-align: center; */
+    border: none;
+    cursor: pointer;
+
+    display: flex; justify-content: center; align-items: center;
+}
+
+.modal-wrap .las {
+    display: block;
+    font-size: 1.6em;
+}

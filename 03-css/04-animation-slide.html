@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-slide : css</title>
+
+    <style>
+        *{
+            margin: 0; padding: 0; font-size: 14px; line-height: 1.5; color: #000;
+            list-style-type: none; box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>animation-slide</h1>
+    <div class="slide">
+        <ul>
+            <li><a href="#"><img src="./images/slide1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./images/slide2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./images/slide3.jpg" alt=""></a></li>
+        </ul>
+    </div>
+
+    <style>
+        .slide{
+            width: 1200px; height: 300px;
+            /* background-color: #e9e9e9; */
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .slide ul{
+            display: flex;
+            position: absolute; top: 0; left: 0;
+            animation: slide-ani 9s infinite alternate;
+        }
+
+        .slide li{ list-style: none;
+        }
+
+        .slide li a{
+            display: block;
+
+        }
+
+        @keyframes slide-ani {
+            0%{top: 0; left: 0;} /* 1번째 슬라이드 */
+            30%{top: 0; left: -0px;} /* 1번째 슬라이드 */
+            40%{top: 0; left: -1200px;} /* 2번째 슬라이드 */
+            70%{top: 0; left: -1200px;} /* 2번째 슬라이드 */
+            80%{top: 0; left: -2400px;} /* 3번째 슬라이드 */
+            100%{top: 0; left: -2400px;} /* 3번째 슬라이드 */
+        }
+
+
+    </style>
+</body>
+</html>

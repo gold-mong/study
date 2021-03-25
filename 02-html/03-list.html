@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list : html</title>
+</head>
+
+<body>
+    <h1>html list</h1>
+    <h2>1. 비순서 목록</h2>
+    <ul>
+        <li>
+            토끼
+            <ol>
+                <li>하양</li>
+                <li>얼룩</li>
+            </ol>
+        </li>
+        <li>강아지</li>
+        <li>고앵이</li>
+    </ul>
+
+    <hr>
+    <h2>2. 순서 목록</h2>
+    <ol>
+        <li>떡볶이</li>
+        <li>감바스</li>
+        <li>알리오올리오</li>
+    </ol>
+
+    <hr>
+    <h2>3. 네비게이션 구현</h2>
+    <ul>
+        <li>
+            menu1
+            <ul>
+                <li>menu1-1</li>
+                <ul>
+                    <li> menu1-1-1</li>
+                    <li> menu1-1-2</li>
+                    <ul>
+                        <li>menu1-1-2-1</li>
+                    </ul>
+                </ul>
+                <li>menu1-2</li>
+                <ul>
+                    <li>menu1-2-1</li>
+                    <li>menu1-2-2</li>
+                </ul>
+                <li>menu1-3</li>
+                <ul>
+                    <li>menu1-3-1</li>
+                    <li>menu1-3-2</li>
+                </ul>
+            </ul>
+        </li>
+        <li>
+            menu2
+            <ul>
+                <li>menu2-1</li>
+                <ul>
+                    <li>menu2-1-1</li>
+                </ul>
+                <li>menu2-2</li>
+                <ul>
+                    <li>menu2-2-1</li>
+                    <li>menu2-2-2</li>
+                    <li>menu2-2-3</li>
+                </ul>
+                <li>menu2-3</li>
+                <ul>
+                    <li>menu2-3-1</li>
+                    <li>menu2-3-2</li>
+                    <li>menu2-3-3</li>
+                </ul>
+            </ul>
+        </li>
+        <li>
+            menu3
+            <ul>
+                <li>menu3-1</li>
+                <ul>
+                    <li>menu3-1-1</li>
+                    <li>menu3-1-2</li>
+                    <li>menu3-1-3</li>
+                </ul>
+                <li>menu3-2</li>
+                <ul>
+                    <li>menu3-2-1</li>
+                </ul>
+                <li>menu3-3</li>
+                <ul>
+                    <li>menu3-3-1</li>
+                    <li>menu3-3-2</li>
+                </ul>
+            </ul>
+        </li>
+        <li>
+            menu4
+            <ul>
+                <li>menu4-1</li>
+                <ul>
+                    <li>menu4-1-1</li>
+                </ul>
+                <li>menu4-2</li>
+                <ul>
+                    <li>menu4-2-1</li>
+                </ul>
+                <li>menu4-3</li>
+                <ul>
+                    <li>menu4-3-1</li>
+                </ul>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+    <!-- nav-depth1 -->
+    <ul>
+        <li>
+            <a href="#">menu1</a>
+
+            <!-- nav-depth2 -->
+            <ul>
+                <li><a href="#">menu1-1</a></li>
+                <ul>
+                    <li><a href="#">menu1-1-1</a></li>
+                    <li><a href="#">menu1-1-2</a></li>
+                </ul>
+                <li><a href="#">menu1-2</a></li>
+                <li><a href="#">menu1-3</a></li>
+            </ul>
+            <!-- //nav-depth2 -->
+        </li>
+
+        <li>
+            <a href="#">menu2</a>
+
+            <!-- nav-depth2 -->
+            <ul>
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu2-2</a></li>
+                <li><a href="#">menu2-3</a></li>
+            </ul>
+            <!-- //nav-depth2 -->
+        </li>
+
+        <li>
+            <a href="#">menu3</a>
+
+            <!-- nav-depth2 -->
+            <ul>
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu3-2</a></li>
+                <li><a href="#">menu3-3</a></li>
+            </ul>
+            <!-- //nav-depth2 -->
+        </li>
+
+        <li>
+            <a href="#">menu4</a>
+
+            <!-- nav-depth2 -->
+            <ul>
+                <li><a href="#">menu4-1</a></li>
+                <li><a href="#">menu4-2</a></li>
+                <li><a href="#">menu4-3</a></li>
+            </ul>
+            <!-- //nav-depth2 -->
+        </li>
+    </ul>
+<br><br>
+    <ul>
+        <li><a href="https://www.samsungsvc.co.kr/">스스로해결</a></li>
+        <ul>
+            <li><a href="https://www.samsungsvc.co.kr/solution?category=10410&product=10414">모바일</a></li>
+            <li><a href="https://www.samsungsvc.co.kr/solution?category=10413&product=10463">pc/컴퓨터</a></li>
+        </ul>
+        <li><a href="#">전문상담</a></li>
+        <ul>
+            <li><a href="#">챗봇상담</a></li>
+            <li><a href="#">이메일상담</a></li>
+        </ul>
+        <li><a href="#">서비스안내</a></li>
+        <ul>
+            <li><a href="#">요금안내</a></li>
+        </ul>
+    </ul>
+
+    <h2>4. 설명 목록</h2>
+    <dl>
+        <dt>정의</dt>
+        <dd>설명1</dd>
+        <dd>설명2</dd>
+        <dt>정의</dt>
+        <dd>설명</dd>
+    </dl>
+    <dl>
+        <dt>정의</dt>
+        <dd>설명1</dd>
+        <dd>설명2</dd>
+        <dt>정의</dt>
+        <dd>설명</dd>
+    </dl>
+
+</body>
+
+</html>

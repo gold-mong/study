@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition : css</title>
+
+
+</head>
+<body>
+    <h1>transition</h1>
+
+    <div class="warp">
+        <div class="t1">1</div>
+        <div class="t2">2</div>
+        <div class="t3">3</div>
+    </div>
+
+    <style>
+
+
+        .warp{
+            display: flex; overflow: hidden;
+            justify-content: space-around; align-items: center;
+            width: 1000px; height: 300px;
+            background-color: rgb(255, 255, 234);
+            transform: scale(0.8);
+        }
+
+        .warp div{
+            width: 200px; height: 200px;
+            background-color: aquamarine;
+            text-align: center; line-height: 200px;
+        }
+
+        .t1{
+            transform: translateY(300px);opacity: 0; 
+            transition: transform 1s, opacity .5s;
+            transition-timing-function: ease-in;
+            
+        }
+        .t2{
+            transform: translate(250px, -250px) rotate(45deg);opacity: 0;
+            transition: transform 1s, opacity .5s;
+            transition-timing-function: ease-out;
+            transition-delay: .5s;
+        }
+        .t3{
+            transform: translateX(300px);opacity: 0;
+            transition: transform 1s, opacity .5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+
+        }
+
+
+        .warp:hover .t1{
+            transform: translate(0px,0px); opacity: 1;
+        }
+        .warp:hover .t2{
+            transform: translate(0px,0px); rotate: (0); opacity: 1;
+        }
+        .warp:hover .t3{
+            transform: translate(0px,0px); opacity: 1;
+        }
+
+
+    </style>
+</body>
+</html>

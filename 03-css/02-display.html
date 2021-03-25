@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display : css</title>
+</head>
+<body>
+    <h1>dispaly</h1>
+
+    <h2>1. display : inline-block</h2>
+
+<!-- block : 가로세로 값을 갖을 수 있고 밑으로 떨어짐,
+                     기본 가로 100% 값을 가짐  -->
+
+<!-- inline (텍스트) : 가로세로 값을 가질 수 없고 옆으로 붙음 -->
+
+
+    <ul class="lst-display">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+    </ul>
+
+    <style>
+        .lst-display{
+            /* block 요소를 가운데 정렬 하고싶으면 margin:0 auto 넣으면되는데
+            지금 사이즈가 ul도 100%라서 정렬이 안됨 */
+            list-style: none;
+            margin: 0 auto; padding: 0;
+            /* text-align: center; */
+            /* inline 이 들어있는 엄마한테 텍스트 정렬 */
+        }
+
+        .lst-display li{
+            /* inline 이 포함되면 텍스트로 생각 */
+            /* display: inline-block; */
+
+            float: left;
+            
+        }
+
+        .lst-display a{
+            display: block;
+            background-color: skyblue;
+            width: 100px; height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            text-decoration: none;
+        }
+
+
+    </style>
+
+   <br><br> <br><hr>
+    <h2>2. dilsplay : none</h2>
+    <div class="layer">레이어</div>
+
+    <style>
+        /* 웹접근성에는 display:none을 사용하시면 스크린리더가 못 읽어요 */
+        .layer{
+            display: block;
+            width: 300px; height: 300px;
+            background-color: olive;
+        }
+
+        .layer:hover{
+            /* display: none;   없애는건 스크립트 써야해 */
+            background-color: teal;
+        }
+
+    </style>
+
+
+</body>
+</html>

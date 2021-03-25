@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background : css</title>
+</head>
+<body>
+    <h1>background css</h1>
+    <h2>1. background-color</h2>
+    <ul class="bg-c">
+        <li>background-color</li>
+        <li>background-color</li>
+        <li>background-color</li>
+    </ul>
+
+    <style>
+        .bg-c li:first-child{
+            background-color: tomato;
+        }
+
+        .bg-c li:nth-child(2){
+            background-color: #78ff00;
+            /* hex */
+            border: 5px solid red;
+            opacity: 0.5;
+        }
+
+        .bg-c li:last-child{
+            background-color: rgba(120, 255, 0, .5);
+            /* rgba 투명도 조절 */
+            border: 5px solid red;
+        }
+
+    </style>
+
+    <br><hr><br>
+    <h2>2. background-imges</h2>
+
+    <h1 class="logo">
+        <a href="#">네이버</a>
+    </h1>
+
+    <style>
+        .logo a{
+            width: 830px; height: 320px;
+            display: block;
+            background-image: url(./images/mobile_185942270329.gif);
+            text-indent: -9999px; 
+        }
+
+        /*  text-indent: px;  글씨 밀어주는 역할*/
+        /* display none 은 시각장애인들에게 안보이기 때문에 text-indent: -9999px;로 처리하여 보이지 않게 처리   */
+
+    </style>
+    
+
+
+    <br><hr><br>
+    <h2>3. background-repeat</h2>
+    <div class="bg-repeat">
+        <style>
+            .bg-repeat {
+                height: 500px;
+                background-color: yellow;
+                background-image: url(./images/bg-repeat.jpg);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+        </style>
+    </div>
+
+<br><br><hr><br>
+<h2>4. background-position</h2>
+<h1 class="logo2"><a href="#">네이버</a></h1>
+<style>
+    .logo2 a{
+        background-image: url(./images/sp_main.png);
+        width: 443px; height: 104px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: 0 -316px;
+        border: 1px solid black;
+        text-indent: -9999px;;
+    }
+</style>
+
+<br>
+<i class="ico-live">live</i>
+<style>
+.ico-live{
+    display: block;
+    background-image: url(./images/sp_main.png);
+    width: 95px; height: 42px;
+    background-repeat: no-repeat;
+    background-position: -539px -490px;
+    text-indent: -9999px;
+}
+</style>
+
+<br><br>
+
+<a href="#" class="link-g link-prev">이전 페이지로 이동</a>
+<a href="#" class="link-g link-next">다음 페이지로 이동</a>
+
+<style>
+
+    .link-g{
+        display: inline-block;
+        background-image: url(./images/sp_main.png);
+        width: 78px; height: 81px;
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+    }
+    
+    .link-prev {
+        background-position: -257px -681px;
+    }
+    
+    .link-next {
+        background-position: -344px -681px;
+    }
+
+</style>
+
+<br><br><br><hr><br>
+<h2>5. background-attachment</h2>
+
+<div class="bg-att"></div>
+
+<style>
+    .bg-att{
+        background-image: url(./images/map.jpg);
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-attachment: fixed;
+    }
+</style>
+
+
+<br><br><hr><br>
+<h2>6.background-size</h2>
+
+<!-- 원본 사이즈 -->
+<div class="bg-g bg-s1"></div>
+<div class="bg-g bg-s2"></div>
+<div class="bg-g bg-s3"></div>
+<div class="bg-g bg-s4"></div>
+<div class="bg-g bg-s5"></div>
+
+
+<style>
+.bg-g{
+    background-image: url(./images/christmas.jpg);
+    height: 300px;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+
+.bg-s2{background-size: 200px auto;}
+.bg-s3{background-size: 50% auto;}
+.bg-s4{background-size: contain; 
+             background-position: 50% 50%;}
+/* 백그라운드 이미지를 짧은 축을 기준으로 꽉 채움 */
+/* 버튼 같은 경우 - 이미지가 잘려나가면 안돼 */
+.bg-s5{background-size: cover;
+             background-position: 50% 50%;}
+/* 백그라운드 이미지를 긴 축을 기준으로 꽉 채움 */
+/* 슬라이드 이미지와 같은 경우 - 이미지 잘려나가도 돼 무조건 꽉 채워줘 */
+
+</style>
+
+<br><br><hr><br>
+<h2>7.background-Shorthand</h2>
+<div class="bg-short"></div>
+
+<style>
+    .bg-short{
+        background: #eee url(./images/bg-a.jpg) 0 50% no-repeat;
+        height: 200px;
+        background-size: cover;
+    }
+
+</style>
+
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float : css</title>
+
+    <style>
+        *{
+            margin: 0; padding: 0;
+            font-size: 14px; line-height: 1.5;
+            color: #000;
+            list-style: none; text-decoration: none;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- <h1>float</h1> -->
+    <h2>1. float</h2>
+
+    <header>
+        <h1>logo</h1>
+        <nav id="gnb">
+            <ul class="nav-depth1 clearfix"> <!-- li에 float 넣어서 안에 아무것도 없는 상태임 -> 높이가 0 (일때 오류날 수 있음) - > clearfix 넣어서 해결 -->
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </nav>
+        <div class="lang">
+            <ul class="lst-lang">
+                <li><a href="#">kor</a></li>
+                <li><a href="#">eng</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <ul class="lst-main">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+            </ul>
+            <ul class="lst-main2">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+            </ul>
+        </main>
+        <aside>사이드</aside>
+    </div>
+    <footer class="clearfix">
+        <h1>로고</h1>
+        <div class="copyright">copyright</div>
+        <div class="sns">sns</div>
+    </footer>
+    
+    <style>
+        header{
+            height: 80px; /* 1. 엄마에게 높이값을 넣어준다 */
+            /* padding: 20px; */
+            text-align: center; /* nav 가운데 정렬 (엄마한테 적용시키기)*/
+            background-color: rgb(111, 255, 212);
+            padding-top: 10px;}
+            
+
+        h1{
+            background-color: rgb(234, 255, 142);
+            float: left; padding: 5px;}
+
+        nav{
+            display: inline-block; /* 그냥 block 넣었더니 가로가 100%로 꽉차서 .lang이 아래로 내려가게됨 */
+            background-color: rgb(255, 123, 202);}
+
+        .nav-depth1 li{
+            
+            float: left;
+        }
+
+        .nav-depth1 a{
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .lang{
+            float: right; padding: 5px;
+            background-color: rgb(206, 37, 37);
+        }
+
+        .lst-lang li{
+            float: left;
+            padding: 0 2px;
+        }
+
+        .container{
+            overflow: hidden; /* 2. 높이값을 넣을 수 없는 영역에는 overflow:hidden 속성을 넣는다. (이제 자식 커지면 이 부분도 같이 커짐) */
+            background-color: rgb(170, 129, 248); }
+
+        main{
+            float: left;
+            width: 70%;
+            background-color: rgb(255, 181, 43); 
+            }
+
+        .lst-main{
+            overflow: hidden;}  /* li에 float 넣어서 안에 아무것도 없는 상태임 -> 높이가 0 (일때 오류날 수 있음) - > overflow: hidden 넣어 해결 */
+
+        .lst-main li{
+            width: 30%;  height: 50px;
+            margin-right: 5%;
+            border: 1px solid rgba(255, 0, 0, 0.562); background-color: rgb(238, 255, 0);
+            float: left;
+        }
+
+        .lst-main li:nth-child(3n){ margin-right: 0px;}
+        /* 3의 배수 3n 으로 넣음 */
+
+        .lst-main li a{
+            height: 100%;
+            display: block;
+        }
+
+        /* bootstrap 정렬 */
+        .lst-main2{margin: 20px -5px 0/*  -5px; */}
+        
+        .lst-main2 li{
+            float: left;
+            /* background-color: rgb(171, 197, 56); border: 1px solid chartreuse; */
+            width: 33.333%; /* height: 50px; */
+            padding: 0 5px;
+        }
+
+        .lst-main2 a{
+            background-color: rgba(255, 127, 80, 0.623);
+            border: 1px solid honeydew;
+            height: 100%;
+            display: block; 
+        }
+
+        aside{
+            float: right; height: 100px;
+            width: 28%;
+            background-color: rgb(255, 197, 197); }
+
+        footer{
+            text-align: center;
+            background-color: rgb(75, 75, 75);
+        }
+
+        .copyright{
+            /* float: left; */
+           /*  clear: both; */ /* float clear (해제) */
+            display: inline-block;
+            background-color: rgb(71, 135, 255);
+        }
+
+        .sns{
+            float: right;
+            background-color: aqua;
+        }
+
+        /* 3. clearfix 처리 -가상공간생김 */
+        .clearfix::after {
+        content: "";
+        clear: both; /* float 해제 */
+        display: block; /* 가로 세로 들어감 */}
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation2 : css</title>
+</head>
+<body>
+    <h1>animation2</h1>
+
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="circle"></div>
+    </div>
+
+    <style>
+        .box1{
+            width: 100px; height: 100px;
+            background-color: rgb(83, 125, 204);
+        }
+
+        .circle{
+            width: 100px; height: 100px; border-radius: 50%;
+            background-color: cyan;
+        }
+
+        .wrap{
+            position: relative;
+            width: 600px; height: 400px;
+            background-color: rgb(238, 238, 238);
+            
+        }
+
+        div{animation-fill-mode: forwards;
+        overflow: hidden;
+        
+        }
+
+        .box1{
+            position: absolute; top: 0; left: 0;
+            animation-name: box;
+            animation-duration: 3s;
+            opacity: 0.5;
+        }
+        .circle{
+            position: absolute; top: 0px; left: 0px;
+            animation-name: circle;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            opacity: 0.5;
+        }
+
+        @keyframes box {
+            0% {left: 0px; top: 0px}
+            100% {left: 250px; top : 150px} 
+        }
+
+        @keyframes circle {
+            0% {left: 500px; top: 300px}
+            100% {left: 300px; top : 200px} 
+            
+        }
+
+    </style>
+
+</body>
+</html>

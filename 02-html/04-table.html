@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html : table</title>
+</head>
+<body>
+    <h1>html table</h1>
+
+    <h2>1. 테이블 기본</h2>
+    <table border="1" style="width: 50%;">
+        <caption>테이블 제목</caption>
+        <colgroup>
+            <col><col width="30%" span="2">
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="row">이름</th>
+            <th scope="col">효니</th>
+            <th scope="col">토끼</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">국어</th>
+            <td>100점</td>
+            <td>50점</td>
+        </tr>
+        <tr>
+            <th scope="row">수학</th>
+            <td>95점</td>
+            <td>50점</td>
+        </tr>
+    </tbody>
+        <tfoot>
+                <tr>
+                    <th scope="row"> 총점</th>
+                    <td> 195점</td>
+                    <td> 100점</td>
+                </tr>
+        </tfoot>
+    </table>
+
+    <br><br><hr><br>
+    <table border="1"  style="width: 30%;">
+        <caption>테이블 제목</caption>
+        <colgroup>
+            <col><col width="30%" span="2">
+        </colgroup>
+        <tr>
+            <td>이름</td>
+            <td colspan="2">효니</td>
+        </tr>
+        <tr>
+            <td rowspan="2">국어</td>
+            <td>100점</td>
+            <td>50점</td>
+        </tr>
+        <tr>
+            <td>95점</td>
+            <td>50점</td>
+        </tr>
+    </table>
+</body>
+</html>
