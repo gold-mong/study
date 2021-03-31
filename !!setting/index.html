@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사장님 인사말 : 회사소개 : 회사이름</title>
+  <meta name="description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
+  <meta property="og:title" content="네이버">
+  <meta property="og:url" content="https://www.naver.com/">
+  <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
+  <meta property="og:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:url" content="https://www.naver.com/">
+  <meta name="twitter:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
+  <meta name="twitter:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/css/comm.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <div class="wrap">
+
+    <!-- header -->
+    <header id="header" class="navbar fixed-top navbar-expand-md navbar-dark sticky">
+      <div class="container">
+        <!-- Brand -->
+        <h1 class="navbar-brand logo">
+          <a href="#">Navbar</a>
+        </h1>
+        <nav>
+
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav nav-depth1">
+              <li class="nav-item">
+                <a class="nav-link" href="#section1">menu1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section2">menu2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section3">menu3</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+    <!-- slide -->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/la.jpg" alt="Los Angeles">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/chicago.jpg" alt="Chicago">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/ny.jpg" alt="New York">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    <!-- //slide -->
+
+    <!-- main -->
+    <div id="main">
+      <!-- section1 -->
+      <section id="section1" class="sec-g sec-1">
+        <div class="container">
+          <h2 class="sec-tit">section title</h2>
+          <div class="sec-cont">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane container active" id="home">Home 내용</div>
+              <div class="tab-pane container fade" id="menu1">Menu 1</div>
+              <div class="tab-pane container fade" id="menu2">Menu 2</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //section1 -->
+
+      <!-- section2 -->
+      <section id="section2" class="sec-g sec-2">
+        <div class="container">
+          <h2 class="sec-tit">section title</h2>
+          <div class="sec-cont">섹션내용</div>
+        </div>
+      </section>
+      <!-- //section2 -->
+
+      <!-- section3 -->
+      <section id="section3" class="sec-g sec-3">
+        <div class="container">
+          <h2 class="sec-tit">Contacts</h2>
+          <div class="sec-cont">
+            <form action="" method="post">
+              <div class="row">
+                <div class="col-md-1 txt-left">
+                  <label for="name"> Name</label></div>
+                <div class="col-md-3">
+                  <input for="text" class="form-control" id="name">
+                </div>
+                <!-- <div class="col-md-4">
+              </div> -->
+
+                <div class="col-md-1 offset-md-4 txt-left">
+                  <label for="number"> Phone</label></div>
+                <div class="col-md-3">
+                  <input type="text" class="form-control" id="number">
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="comment" class="blind">Comment:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- //section3 -->
+    </div>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./dist/js/comm.js"></script>
+</body>
+
+</html>
